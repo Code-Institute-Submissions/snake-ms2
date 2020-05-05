@@ -51,4 +51,7 @@ function Snake() {
             break;
         }
     }
+    this.eat = function(fruit){
+        console.log(fruit);
+    }
 }
