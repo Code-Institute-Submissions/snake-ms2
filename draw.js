@@ -20,7 +20,10 @@ snake.draw();
 if (snake.eat(fruit)) {
     fruit.pickLocation();
 }
+
 snake.checkCollision();
+document.querySelector('.score')
+.innerText = snake.total;
 
 }, 250);
 }());
