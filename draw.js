@@ -19,7 +19,7 @@ snake.update();
 snake.draw();
 
 if (snake.eat(fruit)) {
-    console.log("EATING")
+    fruit.pickLocation();
 }
 
 }, 250);
