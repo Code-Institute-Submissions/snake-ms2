@@ -32,6 +32,7 @@ if (snake.eat(fruit)) {
 }
 
 
+
 snake.checkCollision();
 document.querySelector('.score')
 .innerText = snake.total;
