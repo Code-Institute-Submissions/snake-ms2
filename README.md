@@ -1,39 +1,32 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+I created a Classic Snake Game with a little twist 
+The snake increases speed every time it eats the fruit just to make it more challenging
+showing your current score and your personal highscore. by the way my highscore is 25 try to see if you can beat that...
 
-Welcome Henri1979,
+you simply move the snake using the arrow keys on your key board.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
 
-## Gitpod Reminders
+I used HTML and JavaScript didn´t find Css nessesary for this except for the background color of the canvas
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+I added function to increase the speed and a beep sound everytime snake eats the fruit.
 
-`python3 -m http.server`
 
-A blue button should appear to click: *Make Public*,
+## Testing
 
-Another blue button should appear to click: *Open Browser*.
+I tested the game with JShint and on my desktop didn´t have time to make it mobile friendly.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: *Make Public*,
+## Deployment
 
-Another blue button should appear to click: *Open Browser*.
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+I deployed my work by initializing , adding , by commiting and pushing to github page
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+I opened henri1979/snake-ms2 then clicked the settings button 
+scrolled down and chose master branch and to run it locally just press the link ontop of the masterbranch.
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+## Credits
+Nils nordmark 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+### Acknowledgements
+I resieved inspiration to this project from CodeWithKris on YouTube https://www.youtube.com/watch?v=21eSpMtJwrc&t=266s
