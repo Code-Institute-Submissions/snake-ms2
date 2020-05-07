@@ -4,6 +4,7 @@ function Snake() {
     this.xSpeed = scale * 1;
     this.ySpeed = 0;
     this.total = 0;
+	this.highscore = 0;
     this.tail = [];
 
  
@@ -68,6 +69,8 @@ function Snake() {
     this.eat = function(fruit){
         if (this.x === fruit.x && this.y === fruit.y) {
             this.total++;
+			if(snake.total > snake.highscore)
+				snake.highscore = snake.total
             return true;
         }
 
@@ -79,9 +82,10 @@ function Snake() {
             this.y === this.tail[i].y) {
             this.total = 0;
             this.tail = [];
-           
+			return true;
            }
         }
+		return false;
     }
 }
 

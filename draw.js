@@ -5,6 +5,7 @@ const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 var snake;
 var speed = 250;
+var game;
 
 //Game sound
 function beep()
@@ -25,25 +26,34 @@ function gameloop() {
 	snake.update(); //Update snake position
 	snake.draw();  //Draw snake
 
+	if(snake.checkCollision())	//Check for snake collisions
+	{
+		speed = 250; //reset speed
+		console.log("collision");
+		clearInterval(game); //Clear current running interval
+		game = setInterval(() => { //Start new interval with updated speed
+			gameloop();
+		},speed);
+	}
 	//Snake eats fruit
 	if (snake.eat(fruit)) {
 		fruit.pickLocation();
 		beep(); //Sound when eats fruit
 		if (speed > 10) 
 		{
-			speed = speed -10; //Speed up the interval
-			window.clearInterval(gameloop); //Clear current running interval
-			window.setInterval(() => { //Start new interval with updated speed
+			speed = speed - 10; //Speed up the interval
+			clearInterval(game); //Clear current running interval
+			game = setInterval(() => { //Start new interval with updated speed
 				gameloop();
 			},speed);
 		}
 	}
-	snake.checkCollision(); //Check for snake collisions
-	document.querySelector('.score').innerText = snake.total;
+	
+	document.querySelector('.score').innerText = "Current: " + snake.total + " Highscore: " + snake.highscore;
 }
 
 //Start Gameloop first time
-window.setInterval(() => {
+game = setInterval(() => {
 	gameloop();
 },speed);
 }());
